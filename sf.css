@@ -1,41 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
 *{
     margin: 0 0;
     padding: 0 0 ;
 }
 body {
     background-color: black;
+    font-family: 'Rock Salt', cursive;
 }
 .wrapper{
     width: 98%;
-    /* height: 100vh; */
+    height: 100vh;
     margin: 0 auto;
-    background-image: url("img/beach.jpg");
     background-size: cover;
-    vertical-align: top;
-    padding: 300px 0;
 }
 .menu{
-    width: 30%;
+    width: 350px;
     margin: 0 auto;
     background-color: 
-    rgba(204, 201, 201,.5);
-    
+    rgba(204, 201, 201,.7);
+    text-align: center;
+    border-radius: 10px;
+    border: 5px solid silver;
+    vertical-align: middle;
+    position: absolute;
+    top: 30%;
+    left: 35vw;
+    animation-name: slide;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
 }
 .menu h1 {
     text-align: center;
+    color: #eea300;
+    text-shadow: 2px 2px white;
 }
 button {
-    padding: 20px 50px;
-    background-color: steelblue;
-    color: white;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    color: black;
     outline: none;
     border: none;
     margin: 5px;
     border-radius: 10px;
+    font-family: 'Rock Salt', cursive;
+}
+button:hover {
+    transition-duration: .5s;
+    background-color: steelblue;
+    color: white;
+    box-shadow: 1px 1px 1px black;
 }
 #avatar2{
-    margin-left: 500px;
+    float: right;
+    position: relative;
+    top: 30%;
 }
 #avatar1{
-    margin-left: 100px;
+    float: left;
+    position: relative;
+    top: 30%;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); 
+       
+    }
+    25% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(360deg); 
+     
+    }
+    75% {
+        transform: rotate(540deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+@keyframes slide {
+    0% {
+        transform: translateY(-400px); 
+       
+    }
+    25% {
+        transform: translateY(-300px);
+    }
+    50% {
+        transform: translateY(-200px); 
+     
+    }
+    75% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
